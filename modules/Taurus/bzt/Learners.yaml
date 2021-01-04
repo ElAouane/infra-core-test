@@ -1,0 +1,26 @@
+---
+execution:
+- concurrency: 20
+  ramp-up: 120s
+  hold-for: 5m
+  scenario: Load
+
+scenarios:
+  Load:
+    requests:
+    - follow-redirects: true
+      headers:
+        X-Application-Id: a6fc214d0ff04e86b0d3da67f5d09cc3
+        X-Customer-Id: 2fe4c2
+        accept: application/json
+      label: HTTP Request
+      method: GET
+      url: https://outthink-api-dev.azure-api.net/learning/learners/organization/aa72ac35-66c1-4141-b5c1-9e71dff4447e?sort_property=full_name&sort_direction=desc
+    store-cache: false
+    store-cookie: false
+    use-dns-cache-mgr: false
+
+reporting:
+- module: final-stats
+- module: console
+

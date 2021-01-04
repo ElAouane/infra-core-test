@@ -1,0 +1,13 @@
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform/
+ssh/
+.terraformrc
+terraform.rc
+.idea/
